@@ -1,0 +1,22 @@
+import java.util.*;
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+    Scanner s = new Scanner(System.in);
+        long isbn=s.nextLong();
+        int count=0,i=10;
+        long n=isbn,sum=0,d;
+        while(n>0)
+        {
+            d=n%10;
+            sum+=d*i;
+            n=n/10;
+            count ++;
+            i--;
+        }
+        if(sum%11!=0 || count!=10)
+            System.out.println("Illegal ISBN");
+        else
+            System.out.println("Legal ISBN");
+
+    }
+}
